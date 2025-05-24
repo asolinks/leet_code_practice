@@ -19,3 +19,20 @@ public:
         
     }
 };
+
+int main() {
+    Solution solution;
+    
+    std::vector<int> nums = {1, 1, 1, 2, 2, 3};
+
+    int newLength = solution.removeDuplicates(nums);
+
+    std::cout << "New length: " << newLength << std::endl;
+    std::cout << "Modified array: ";
+    for (int i = 0; i < newLength; ++i) {
+        std::cout << nums[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
