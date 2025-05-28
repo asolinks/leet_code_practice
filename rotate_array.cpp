@@ -22,7 +22,7 @@ void printVector(const std::vector<int>& vec) {
     for (int num : vec) {
         std::cout << num << ' ';
     }
-    std::cout << '\n';
+    std::cout << std::endl;
 }
 
 int main() {
@@ -43,6 +43,6 @@ int main() {
     std::vector<int> expected = {5, 6, 7, 1, 2, 3, 4};
     assert(nums == expected);
 
-    std::cout << "Test passed.\n";
+    std::cout << "Test passed." << std::endl;
     return 0;
 }
