@@ -17,3 +17,32 @@ public:
 
     }
 };
+
+void printVector(const std::vector<int>& vec) {
+    for (int num : vec) {
+        std::cout << num << ' ';
+    }
+    std::cout << '\n';
+}
+
+int main() {
+    Solution solution;
+    
+    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7};
+    int k = 3;
+    
+    std::cout << "Original vector: ";
+    printVector(nums);
+    
+    solution.rotate(nums, k);
+    
+    std::cout << "Rotated vector:  ";
+    printVector(nums);
+
+    // Expected output after rotation: [5, 6, 7, 1, 2, 3, 4]
+    std::vector<int> expected = {5, 6, 7, 1, 2, 3, 4};
+    assert(nums == expected);
+
+    std::cout << "Test passed.\n";
+    return 0;
+}
