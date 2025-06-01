@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
 class Solution {
 public:
     int romanToInt(std::string s) {
@@ -27,3 +31,17 @@ public:
         
     }
 };
+
+int main() {
+    Solution solution;
+
+    std::string test1 = "III";
+    std::string test2 = "LVIII";
+    std::string test3 = "MCMXCIV";
+
+    std::cout << "Roman numeral " << test1 << " = " << solution.romanToInt(test1) << std::endl;
+    std::cout << "Roman numeral " << test2 << " = " << solution.romanToInt(test2) << std::endl;
+    std::cout << "Roman numeral " << test3 << " = " << solution.romanToInt(test3) << std::endl;
+
+    return 0;
+}
