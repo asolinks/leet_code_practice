@@ -22,3 +22,13 @@ public:
         return jumps;
     }
 };
+
+int main() {
+    Solution sol;
+    std::vector<int> nums = {2, 3, 1, 1, 4}; // Example input
+
+    int result = sol.jump(nums);
+    std::cout << "Minimum number of jumps: " << result << std::endl;
+
+    return 0;
+}
