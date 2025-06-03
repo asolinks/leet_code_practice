@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 
-cclass Solution {
+class Solution {
 public:
     int jump(std::vector<int>& nums) {
         int n = nums.size();
