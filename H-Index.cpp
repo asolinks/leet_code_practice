@@ -18,3 +18,14 @@ public:
         
     }
 };
+
+int main() {
+    std::vector<int> citations = {3, 0, 6, 1, 5};
+    
+    Solution sol;
+    int h_index = sol.hIndex(citations);
+
+    std::cout << "The h-index is: " << h_index << std::endl;
+
+    return 0;
+}
