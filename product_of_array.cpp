@@ -5,7 +5,7 @@
 
 class Solution {
 public:
-    vector<int> productExceptSelf(std::vector<int>& nums) {
+    std::vector<int> productExceptSelf(std::vector<int>& nums) {
         int n = nums.size();
         std::vector<int> answer(n, 1);
 
