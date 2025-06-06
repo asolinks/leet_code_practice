@@ -26,3 +26,23 @@ public:
         return answer;
     }
 };
+
+int main() {
+    // Example input
+    std::vector<int> nums = {1, 2, 3, 4};
+
+    // Create an instance of Solution
+    Solution solution;
+
+    // Get the result
+    std::vector<int> result = solution.productExceptSelf(nums);
+
+    // Print the result
+    std::cout << "Output: ";
+    for (int val : result) {
+        std::cout << val << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
