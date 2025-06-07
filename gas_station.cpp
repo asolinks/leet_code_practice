@@ -23,3 +23,17 @@ public:
         return total_tank >= 0 ? start_index : -1;
     }
 };
+
+int main() {
+    Solution solution;
+
+    std::vector<int> gas1 = {1, 2, 3, 4, 5};
+    std::vector<int> cost1 = {3, 4, 5, 1, 2};
+    std::cout << "Test Case 1 Output: " << solution.canCompleteCircuit(gas1, cost1) << std::endl;  // Expected: 3
+
+    std::vector<int> gas2 = {2, 3, 4};
+    std::vector<int> cost2 = {3, 4, 3};
+    std::cout << "Test Case 2 Output: " << solution.canCompleteCircuit(gas2, cost2) << std::endl;  // Expected: -1
+
+    return 0;
+}
