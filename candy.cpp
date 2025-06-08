@@ -27,3 +27,18 @@ public:
         return totalCandies;
     }
 };
+
+int main() {
+    Solution solution;
+
+     std::vector<int> ratings1 = {1, 0, 2};
+    std::cout << "Minimum candies (Example 1): " << solution.candy(ratings1) << std::endl; // Expected: 5
+
+    std::vector<int> ratings2 = {1, 2, 2};
+    std::cout << "Minimum candies (Example 2): " << solution.candy(ratings2) << std::endl; // Expected: 4
+
+    std::vector<int> ratings3 = {1, 3, 4, 5, 2};
+    std::cout << "Minimum candies (Custom): " << solution.candy(ratings3) << std::endl; // Expected: 11
+
+    return 0;
+}
