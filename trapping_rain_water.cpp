@@ -30,3 +30,13 @@ public:
         return water;
     }
 };
+
+int main() {
+    Solution solution;
+    std::vector<int> height = {0,1,0,2,1,0,1,3,2,1,2,1};
+
+    int trappedWater = solution.trap(height);
+    std::cout << "Trapped water: " << trappedWater << std::endl;
+
+    return 0;
+}
