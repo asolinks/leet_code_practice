@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <utility>
 
 class Solution {
 public:
@@ -31,3 +33,13 @@ public:
         
     }
 };
+
+int main() {
+    Solution sol;
+    int number = 3749;
+
+    std::string romanNumeral = sol.intToRoman(number);
+    std::cout << "The Roman numeral for " << number << " is " << romanNumeral << std::endl;
+
+    return 0;
+}
