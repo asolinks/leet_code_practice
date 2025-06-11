@@ -4,7 +4,7 @@
 
 class Solution {
 public:
-    string longestCommonPrefix(std::vector<string>& strs) {
+    std::string longestCommonPrefix(std::vector<std::string>& strs) {
         if (strs.empty()) return "";
 
         std::string prefix = strs[0];
