@@ -22,3 +22,22 @@ public:
     	return result;        
     }
 };
+
+nt main() {
+    Solution sol;
+
+    std::string input1 = "the sky is blue";
+    std::string input2 = "  hello world  ";
+    std::string input3 = "a good   example";
+
+    std::cout << "Input: \"" << input1 << "\"\n";
+    std::cout << "Output: \"" << sol.reverseWords(input1) << "\"\n\n";
+
+    std::cout << "Input: \"" << input2 << "\"\n";
+    std::cout << "Output: \"" << sol.reverseWords(input2) << "\"\n\n";
+
+    std::cout << "Input: \"" << input3 << "\"\n";
+    std::cout << "Output: \"" << sol.reverseWords(input3) << "\"\n\n";
+
+    return 0;
+}
