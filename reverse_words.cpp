@@ -1,10 +1,11 @@
+#include<iostream>
 #include<sstream>
 #include<algorithm>
 #include<vector>
 
 class Solution {
 public:
-    string reverseWords(string s) {
+    std::string reverseWords(std::string s) {
     	std::istringstream tokenize (s);
     	std::vector<std::string> words;
     	std::string word, result;
@@ -23,7 +24,7 @@ public:
     }
 };
 
-nt main() {
+int main() {
     Solution sol;
 
     std::string input1 = "the sky is blue";
