@@ -29,3 +29,17 @@ public:
         
     }
 };
+
+int main() {
+    Solution sol;
+
+    std::string input = "PAYPALISHIRING";
+    int numRows = 3;
+
+    std::string output = sol.convert(input, numRows);
+
+    std::cout << "Input: " << input << std::endl;
+    std::cout << "Zigzag Conversion with " << numRows << " rows: " << output << std::endl;
+
+    return 0;
+}
