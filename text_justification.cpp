@@ -1,18 +1,19 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<string>
 
 class Solution {
 public:
-    vector<string> fullJustify(vector<string>& words, int maxWidth) {
-        vector<string> result;
+    std::vector<std::string> fullJustify(std::vector<std::string>& words, int maxWidth) {
+        std::vector<std::string> result;
         int index = 0;
         
         while (index < words.size()) {
             int totalChars = words[index].length();
             int last = index + 1;
 
-            // Greedily add as many words as fit
+            
             while (last < words.size()) {
                 if (totalChars + 1 + words[last].length() > maxWidth) break;
                 totalChars += 1 + words[last].length(); // 1 for the space
@@ -20,7 +21,7 @@ public:
             }
 
             int gaps = last - index - 1;
-            string line;
+            std::string line;
 
             
             if (last == words.size() || gaps == 0) {
@@ -29,16 +30,16 @@ public:
                     if (i < last - 1) line += " ";
                 }
                 
-                line += string(maxWidth - line.length(), ' ');
+                line += std::string(maxWidth - line.length(), ' ');
             } else {
-                // Full justification
+                
                 int totalSpaces = maxWidth - totalChars + gaps;
                 int spacePerGap = totalSpaces / gaps;
                 int extraSpaces = totalSpaces % gaps;
 
                 for (int i = index; i < last - 1; i++) {
                     line += words[i];
-                    line += string(spacePerGap + (i - index < extraSpaces ? 1 : 0), ' ');
+                    line += std::string(spacePerGap + (i - index < extraSpaces ? 1 : 0), ' ');
                 }
                 line += words[last - 1]; 
             }
@@ -53,14 +54,14 @@ public:
 
 int main() {
     Solution sol;
-    vector<string> words = {"This", "is", "an", "example", "of", "text", "justification."};
+    std::vector<std::string> words = {"This", "is", "an", "example", "of", "text", "justification."};
     int maxWidth = 16;
 
-    vector<string> justified = sol.fullJustify(words, maxWidth);
+    std::vector<std::string> justified = sol.fullJustify(words, maxWidth);
 
-    cout << "Justified Text:\n";
-    for (const string& line : justified) {
-        cout << "\"" << line << "\"" << endl;
+    std::cout << "Justified Text:\n";
+    for (const std::string& line : justified) {
+        std::cout << "\"" << line << "\"" << std::endl;
     }
 
     return 0;
