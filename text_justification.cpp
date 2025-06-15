@@ -50,3 +50,18 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<string> words = {"This", "is", "an", "example", "of", "text", "justification."};
+    int maxWidth = 16;
+
+    vector<string> justified = sol.fullJustify(words, maxWidth);
+
+    cout << "Justified Text:\n";
+    for (const string& line : justified) {
+        cout << "\"" << line << "\"" << endl;
+    }
+
+    return 0;
+}
