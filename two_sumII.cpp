@@ -26,15 +26,15 @@ int main() {
     Solution sol;
 
     // Test case
-    vector<int> numbers = {2, 7, 11, 15};
+    std::vector<int> numbers = {2, 7, 11, 15};
     int target = 9;
 
-    vector<int> result = sol.twoSum(numbers, target);
+    std::vector<int> result = sol.twoSum(numbers, target);
 
     if (!result.empty()) {
-        cout << "Indices (0-based): [" << result[0] << ", " << result[1] << "]" << endl;
+        std::cout << "Indices (0-based): [" << result[0] << ", " << result[1] << "]" << std::endl;
     } else {
-        cout << "No solution found." << endl;
+        std::cout << "No solution found." << std::endl;
     }
 
     return 0;
