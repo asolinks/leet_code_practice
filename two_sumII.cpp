@@ -21,3 +21,21 @@ public:
         return {};  
     }
 };
+
+int main() {
+    Solution sol;
+
+    // Test case
+    vector<int> numbers = {2, 7, 11, 15};
+    int target = 9;
+
+    vector<int> result = sol.twoSum(numbers, target);
+
+    if (!result.empty()) {
+        cout << "Indices (0-based): [" << result[0] << ", " << result[1] << "]" << endl;
+    } else {
+        cout << "No solution found." << endl;
+    }
+
+    return 0;
+}
