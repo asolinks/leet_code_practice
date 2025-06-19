@@ -22,3 +22,15 @@ public:
         return maxArea;
     }
 };
+
+int main() {
+    Solution solution;
+
+    // Example test case
+    std::vector<int> height = {1,8,6,2,5,4,8,3,7};
+    int result = solution.maxArea(height);
+
+    std::cout << "Maximum water container area: " << result << std::endl;
+
+    return 0;
+}
