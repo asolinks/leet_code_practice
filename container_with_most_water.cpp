@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 
 class Solution {
 public:
@@ -9,9 +10,9 @@ public:
         int maxArea = 0;
 
         while (left < right) {
-            int h = min(height[left], height[right]);
+            int h = std::min(height[left], height[right]);
             int w = right - left;
-            maxArea = max(maxArea, h * w);
+            maxArea = std::max(maxArea, h * w);
 
             if (height[left] < height[right])
                 ++left;
