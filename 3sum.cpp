@@ -38,3 +38,22 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution solution;
+    std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
+
+    std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    std::cout << "Triplets that sum to zero:" << std::endl;
+    for (const auto& triplet : result) {
+        std::cout << "[";
+        for (size_t i = 0; i < triplet.size(); ++i) {
+            std::cout << triplet[i];
+            if (i < triplet.size() - 1) std::cout << ", ";
+        }
+        std::cout << "]" << std::endl;
+    }
+
+    return 0;
+}
