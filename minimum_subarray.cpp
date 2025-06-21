@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<climits>
 
 class Solution {
 public:
@@ -24,11 +25,11 @@ int main() {
     Solution sol;
 
     int target = 7;
-    vector<int> nums = {2, 3, 1, 2, 4, 3};
+    std::vector<int> nums = {2, 3, 1, 2, 4, 3};
 
     int result = sol.minSubArrayLen(target, nums);
 
-    cout << "Minimum subarray length with sum ≥ " << target << " is: " << result << endl;
+    std::cout << "Minimum subarray length with sum ≥ " << target << " is: " << result << std::endl;
 
     return 0;
 }
