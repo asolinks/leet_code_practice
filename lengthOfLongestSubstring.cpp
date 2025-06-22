@@ -1,4 +1,5 @@
 #include<iostream>
+#include<unordered_set>
 #include<string>
 #include<algorithm>
 
@@ -20,4 +21,17 @@ public:
 		}
 		return maxLength;
 	}
+};
+
+int main() {
+    Solution solution;
+
+    std::string input;
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, input);
+
+    int result = solution.lengthOfLongestSubstring(input);
+    std::cout << "Length of the longest substring without repeating characters: " << result << std::endl;
+
+    return 0;
 }
