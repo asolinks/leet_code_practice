@@ -54,3 +54,19 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution solution;
+    std::string s = "barfoofoobarthefoobarman";
+    std::vector<std::string> words = {"bar", "foo", "the"};
+
+    std::vector<int> result = solution.findSubstring(s, words);
+
+    std::cout << "Starting indices of concatenated substrings:\n";
+    for (int index : result) {
+        std::cout << index << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
