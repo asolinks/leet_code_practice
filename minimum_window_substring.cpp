@@ -45,3 +45,25 @@ public:
         return min_len == INT_MAX ? "" : s.substr(min_start, min_len);
     }
 };
+
+
+int main() {
+    Solution solution;
+
+    string s1 = "ADOBECODEBANC", t1 = "ABC";
+    string result1 = solution.minWindow(s1, t1);
+    cout << "Input: s = \"" << s1 << "\", t = \"" << t1 << "\"\n";
+    cout << "Output: \"" << result1 << "\"\n\n";
+
+    string s2 = "a", t2 = "a";
+    string result2 = solution.minWindow(s2, t2);
+    cout << "Input: s = \"" << s2 << "\", t = \"" << t2 << "\"\n";
+    cout << "Output: \"" << result2 << "\"\n\n";
+
+    string s3 = "a", t3 = "aa";
+    string result3 = solution.minWindow(s3, t3);
+    cout << "Input: s = \"" << s3 << "\", t = \"" << t3 << "\"\n";
+    cout << "Output: \"" << result3 << "\"\n";
+
+    return 0;
+}
