@@ -27,3 +27,19 @@ public:
         return output;
     }
 };
+
+
+
+int main() {
+    Solution solution;
+    std::vector<int> nums = {0, 1, 2, 4, 5, 7};
+
+    std::vector<std::string> result = solution.summaryRanges(nums);
+
+    std::cout << "Summary Ranges:\n";
+    for (const std::string& range : result) {
+        std::cout << range << "\n";
+    }
+
+    return 0;
+}
