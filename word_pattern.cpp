@@ -41,3 +41,22 @@ public:
         return true;
     }
 };
+
+
+int main() {
+    Solution solution;
+
+    std::string pattern1 = "abba";
+    std::string s1 = "dog cat cat dog";
+    std::cout << std::boolalpha << solution.wordPattern(pattern1, s1) << "\n";  // Expected: true
+
+    std::string pattern2 = "abba";
+    std::string s2 = "dog cat cat fish";
+    std::cout << std::boolalpha << solution.wordPattern(pattern2, s2) << "\n";  // Expected: false
+
+    std::string pattern3 = "aaaa";
+    std::string s3 = "dog cat cat dog";
+    std::cout << std::boolalpha << solution.wordPattern(pattern3, s3) << "\n";  // Expected: false
+
+    return 0;
+}
