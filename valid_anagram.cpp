@@ -4,10 +4,10 @@
 
 class Solution {
 public:
-    bool isAnagram(string s, string t) {
+    bool isAnagram(std::string s, std::string t) {
         if (s.length() != t.length()) return false;
 
-        vector<int> count(26, 0);
+        std::vector<int> count(26, 0);
 
         for (int i = 0; i < s.length(); ++i) {
             count[s[i] - 'a']++;
@@ -21,3 +21,19 @@ public:
         return true;
     }
 };
+
+int main() {
+    Solution solution;
+
+    std::string s1 = "anagram";
+    std::string t1 = "nagaram";
+    std::cout << "Is \"" << t1 << "\" an anagram of \"" << s1 << "\"? "
+         << (solution.isAnagram(s1, t1) ? "True" : "False") << std::endl;
+
+    std::string s2 = "rat";
+    std::string t2 = "car";
+    std::cout << "Is \"" << t2 << "\" an anagram of \"" << s2 << "\"? "
+         << (solution.isAnagram(s2, t2) ? "True" : "False") << std::endl;
+
+    return 0;
+}
