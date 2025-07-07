@@ -22,3 +22,22 @@ public:
         
     }
 };
+
+int main() {
+    Solution solution;
+
+    std::vector<std::string> input = {"eat", "tea", "tan", "ate", "nat", "bat"};
+
+    std::vector<std::vector<std::string>> output = solution.groupAnagrams(input);
+
+    std::cout << "Grouped Anagrams:\n";
+    for (const auto& group : output) {
+        std::cout << "[ ";
+        for (const auto& word : group) {
+            std::cout << word << " ";
+        }
+        std::cout << "]\n";
+    }
+
+    return 0;
+}
