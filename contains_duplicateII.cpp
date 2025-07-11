@@ -8,7 +8,7 @@ public:
         std::unordered_set<int> window;
 
         for (int i = 0; i < nums.size(); ++i){
-            if (window.count(num[i])) return true;
+            if (window.count(nums[i])) return true;
             window.insert(nums[i]);
 
             if (window.size() > k){
