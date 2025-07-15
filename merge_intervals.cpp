@@ -26,3 +26,15 @@ public:
         return merged;
     }
 };
+
+int main() {
+    Solution sol;
+    std::vector<std::vector<int>> input = {{1,3},{2,6},{8,10},{15,18}};
+    std::vector<std::vector<int>> output = sol.merge(input);
+
+    for (const auto& interval : output) {
+        std::cout << "[" << interval[0] << "," << interval[1] << "] ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
