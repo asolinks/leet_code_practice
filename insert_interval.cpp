@@ -2,10 +2,10 @@
 #include <vector>
 #include <algorithm>
 
-cclass Solution {
+class Solution {
 public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        vector<vector<int>> result;
+    std::vector<std::vector<int>> insert(std::vector<std::vector<int>>& intervals, std::vector<int>& newInterval) {
+        std::vector<std::vector<int>> result;
         int i = 0;
         int n = intervals.size();
 
@@ -17,8 +17,8 @@ public:
 
         // Merge all overlapping intervals with newInterval
         while (i < n && intervals[i][0] <= newInterval[1]) {
-            newInterval[0] = min(newInterval[0], intervals[i][0]);
-            newInterval[1] = max(newInterval[1], intervals[i][1]);
+            newInterval[0] = std::min(newInterval[0], intervals[i][0]);
+            newInterval[1] = std::max(newInterval[1], intervals[i][1]);
             i++;
         }
 
@@ -34,3 +34,19 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution sol;
+
+    std::vector<std::vector<int>> intervals = {{1, 3}, {6, 9}};
+    std::vector<int> newInterval = {2, 5};
+
+    std::vector<std::vector<int>> result = sol.insert(intervals, newInterval);
+
+    std::cout << "Resulting intervals:\n";
+    for (const auto& interval : result) {
+        std::cout << "[" << interval[0] << ", " << interval[1] << "]\n";
+    }
+
+    return 0;
+}
